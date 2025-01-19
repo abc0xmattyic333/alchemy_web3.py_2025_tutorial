@@ -91,3 +91,24 @@ We will also verify the block number using [Etherscan](https://etherscan.io/)
 I suggest running the program again to see the latest block number to just be sure.
 
 You can verify that the output of the block is indeed on Etherscan.io by copying the block number and searching it in the search bar on [Etherscan](https://etherscan.io/).
+
+Now let's try to get some more data from the blockchain.
+
+You can see that I have updated our main.py file and added the following code:
+
+```
+latest_transaction = web3.eth.get_transaction_by_block('latest', 0)
+print(f"Latest Transaction: {latest_transaction}")
+
+# Get the latest transaction receipt
+
+latest_transaction_receipt = web3.eth.get_transaction_receipt(latest_transaction['hash'])
+print(f"Latest Transaction Receipt: {latest_transaction_receipt}")
+
+# Check the current gas price
+gas_price = web3.eth.gas_price
+print(f"Current Gas Price: {gas_price}")
+```
+
+If you go to the images folder, you will see the latest transaction and latest transaction receipt as well as the current gas price.
+
