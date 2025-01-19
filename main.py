@@ -16,3 +16,17 @@ if web3.is_connected():
 else:
     print("Failed to connect to Ethereum network")
     
+
+# Get the latest transaction balance in wei
+
+latest_transaction = web3.eth.get_transaction_by_block('latest', 0)
+print(f"Latest Transaction: {latest_transaction}")
+
+# Get the latest transaction receipt
+
+latest_transaction_receipt = web3.eth.get_transaction_receipt(latest_transaction['hash'])
+print(f"Latest Transaction Receipt: {latest_transaction_receipt}")
+
+# Check the current gas price
+gas_price = web3.eth.gas_price
+print(f"Current Gas Price: {gas_price}")
