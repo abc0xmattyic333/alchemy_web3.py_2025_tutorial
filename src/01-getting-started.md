@@ -14,7 +14,7 @@ python3
 
 You can see that I have it installed on my computer by visiting the images folder.
 
-Create a working directory by typing this command in .
+Create a working directory by typing this command in.
 
 ```
 mkdir alchemy_web3.py_2025_tutorial
@@ -35,7 +35,7 @@ I can open VS Code from my terminal with the following command:
 code .
 ```
 
-Once you have your editor or IDE open you can then create a new venv. Choose the python i
+Once you have your editor or IDE open you can then create a new venv. Choose the python interpreter.
 
 Create a new python file:
 
