@@ -112,3 +112,76 @@ print(f"Current Gas Price: {gas_price}")
 
 If you go to the images folder, you will see the latest transaction and latest transaction receipt as well as the current gas price.
 
+What if we wanted to check some different on-chain data from say Flow, or other EVM's?
+
+We can first replace our Alchemy API Key with the Network that we would like to get some data from.
+
+I am going to use Flow, I think Flow has a lot of upscale and it's still relatively new within the Blockchain space.
+
+It is also a cheaper alternative to use for beginners due to the current gas fees on Ethereum, Solana, or other chains. 
+
+To learn more about Flow and how to get started developing on Flow, visit the following link(s). 
+
+[Flow](https://flow.com/)
+
+[Flow Github](https://github.com/onflow)
+
+[Flow Playground](https://play.flow.com/)
+
+[Emerald Academy](https://academy.ecdao.org/en?utm_source=Flowverse&utm_medium=Website&utm_campaign=Dapp)
+
+[Emerald Dao Github](https://github.com/emerald-dao)
+
+[Flow Wallet](https://wallet.flow.com/)
+
+[Flowverse](https://www.flowverse.co/)
+
+[Cadence](https://cadence-lang.org/docs)
+
+[Cadence Cookbook](https://cadence-cookbook.vercel.app/?utm_source=Flowverse&utm_medium=Website&utm_campaign=Dapp)
+
+[CadenceFun](https://cadence-fun-frontend.vercel.app/?utm_source=Flowverse&utm_medium=Website&utm_campaign=Dapp)
+
+Alright, there are several ways that we can go about obtaining some Flow EVM data.
+
+- 1. We could create an entirely new working directory using the same methods as before...
+- 2. Or we could just replace our Alchemy API Key with the Flow EVM Mainnet endpoint and modify our main.py file to see the changes.
+
+You can replace the code in your main.py file with the following code:
+```
+# Install the Web3 library using pip
+
+# Import the required libraries
+from web3 import Web3
+
+# Replace with your Alchemy API URL
+alchemy_url = "https://flow-mainnet.g.alchemy.com/v2/iZafxHRZc-fNW3y7Uffo0fDZp26S6IKw"
+web3 = Web3(Web3.HTTPProvider(alchemy_url))
+
+# Check if connected
+if web3.is_connected():
+    print("Connected to Flow network")
+    # Get the latest block number
+    latest_block = web3.eth.block_number
+    print(f"Latest Flow Block Number: {latest_block}")
+else:
+    print("Failed to connect to Flow network")
+    
+
+# Check the current gas price
+gas_price = web3.eth.gas_price
+print(f"Current Gas Price: {gas_price}")
+```
+You should get an output that you are connected to Flow Mainnet, the latest block number, and the current gas price.
+
+If you take a look in our images folder you will see the output of my Python program.
+
+Now, head back to our Alchemy Dashboard to view our analytics.
+
+If you can see that I have a total of 12 requests.
+
+You can also check the HTTPS Request Count By Network, you will see the graph has updated to display that we have connected to Flow EVM mainnet.
+
+You then can go back to our request logs, and see eth_gasPrice, eth_blockNumber, web3_clientVersion calls were made to the flow evm.
+
+Awesome! :)

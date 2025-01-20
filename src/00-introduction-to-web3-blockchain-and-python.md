@@ -1,6 +1,6 @@
 # Introduction to Web3, Blockchain, and Python.
 
-Hello, and welcome!:)
+Hello, and welcome! :)
 
 My name is abc0xmattyic333, I am going to be your mentor and developer advocate throughout this small tutorial.
 
