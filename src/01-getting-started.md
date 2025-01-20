@@ -178,7 +178,7 @@ If you take a look in our images folder you will see the output of my Python pro
 
 Now, head back to our Alchemy Dashboard to view our analytics.
 
-If you can see that I have a total of 12 requests.
+You should see that I have a total of 12 requests.
 
 You can also check the HTTPS Request Count By Network, you will see the graph has updated to display that we have connected to Flow EVM mainnet.
 
